@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+ }
+
+/* body{
+    background-color: yellow;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Crimson Text', serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
+ } */
+
+#main-title{
+    position: sticky;
+    background-color: #222f3e;
+    height: 60px;
+    top: 0;
+    z-index: 2;
+}
+
+#main-title h3{
+    font-size: 20px;
+    padding-top: 15px;
+    padding-right: 30px;
+    text-align: right;
+    overflow: hidden;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#main-title h3 a{
+    text-decoration: none;
+    color: white;
+}
+
+#main-title h3 a:hover{
+    color: #ecf0f1b0;
+}
+
+#side-nav{
+    font-family: 'Open Sans Condensed', sans-serif;
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #34495e;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+#side-nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    margin-top: 50px;
+}
+
+#side-nav li a{
+    display: block;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+#side-nav li a:hover {
+    color: #ecf0f1b0;
+}
+
+div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;
+    background-color: teal;
+    margin-right: 2px;
+}
+
+/* table */
+
+table {
+    font-size: 12px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+td a{
+    text-decoration: none;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+#content {
+    font-family: 'Crimson Text', serif;
+    margin-left: 120px;
+    margin-top: 30px;
+}
+/* end table */
+#chart {
+    font-size: 10px;
+}
+
+
+.axis path, .axis line {
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+			
+.axis text {
+	font-family: 'Crimson Text', serif;
+	font-size: 10px;
+}
+
+.dot {
+    stroke: white;
+  }
+  
+.tooltip {
+    position: absolute;
+    width: 200px;
+    height: 28px;
+    pointer-events: none;
+    font-size: 10px;
+}
+
+.line {
+    /* stroke: #999; */
+    stroke: #c0392b;
+    stroke-opacity: 0.6;
+    stroke-dasharray: 5;
+  }
+
+#plot_image{
+    /* float: right; */
+    width: 500px;
+    height: auto;
+    /* overflow: hidden; */
+    padding-right: 10px;
+}

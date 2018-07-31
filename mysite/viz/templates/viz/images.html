@@ -1,0 +1,36 @@
+{% extends "viz/index.html" %}
+
+{% block content %}
+    <div id="content">
+        {% if feature_list %}
+        <table>
+            <tr>
+                <th>Image Name</th>
+                <th>Click Through Rate</th>
+                <th>Black X</th>
+                <th>Text</th>
+                <th>Girl</th>
+                <th>Headwear</th>
+                <th>Poster</th>
+                <th>Fun</th>
+                <th>Skyblue</th>
+            </tr>
+            {% for img in feature_list %}
+                <tr>
+                    <td><a href="{% url 'viz:image' img.image_name %}">{{img.image_name}}</a></td>
+                    <td>{{img.ctr|floatformat:"2"}}</td>
+                    <td>{{img.black_x|floatformat:"2"}}</td>
+                    <td>{{img.text|floatformat:"2"}}</td>
+                    <td>{{img.girl|floatformat:"2"}}</td>
+                    <td>{{img.headwear|floatformat:"2"}}</td>
+                    <td>{{img.poster|floatformat:"2"}}</td>
+                    <td>{{img.fun|floatformat:"2"}}</td>
+                    <td>{{img.skyblue|floatformat:"2"}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>There are no images.</p>
+        {% endif %}
+    </div>
+{% endblock %}

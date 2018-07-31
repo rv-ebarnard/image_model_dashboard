@@ -1,0 +1,15 @@
+[
+    {"model": "viz.featurectr", 
+        "pk": "imgcontent.30secstomars-walkonwater_imgtemp.achalf", 
+        "fields": {
+            "ctr": "0.0065900168255748700", 
+            "black_x": "0.0195694714784622000", 
+            "text": "0.9065129160881040000", 
+            "girl": "0E-19", 
+            "headwear": "0E-19", 
+            "poster": "0.7106531262397760000", 
+            "fun": "0E-19", 
+            "skyblue": "0E-19"
+        }
+    }        
+]
