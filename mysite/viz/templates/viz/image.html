@@ -1,5 +1,5 @@
 {% extends "viz/index.html" %}
-
+{% load static %}
 {% block content %}
     <div id="content">
         {% if img %}
@@ -27,11 +27,11 @@
                     <td>{{x.fun|floatformat:"2"}}</td>
                     <td>{{x.skyblue|floatformat:"2"}}</td>
                 </tr>
-
+                <img src="{% static '../static/images/'|add:x.image_name|add:'.png' %}" alt="{{x.image_name}}" id="grid_image">
             {% endfor %}
             </table>
         {% else %}
-            <p>there is no</p>
+            <p>There are no images with this name</p>
         {% endif%}    
     </div> 
 {% endblock %}

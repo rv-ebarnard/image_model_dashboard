@@ -1,150 +1,217 @@
-* {
-    margin: 0;
-    padding: 0;
- }
-
-/* body{
-    background-color: yellow;
+/* FONTS
     font-family: 'Inconsolata', monospace;
     font-family: 'Nunito', sans-serif;
     font-family: 'Crimson Text', serif;
     font-family: 'Raleway', sans-serif;
     font-family: 'Open Sans Condensed', sans-serif;
- } */
+ */
 
-#main-title{
-    position: sticky;
-    background-color: #222f3e;
-    height: 60px;
-    top: 0;
-    z-index: 2;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-#main-title h3{
-    font-size: 20px;
-    padding-top: 15px;
-    padding-right: 30px;
-    text-align: right;
-    overflow: hidden;
-    font-family: 'Open Sans Condensed', sans-serif;
+body {
+	background-color: #2a2a2a;
 }
 
-#main-title h3 a{
-    text-decoration: none;
-    color: white;
+h1 {
+	font-size: 15px;
+	text-align: center;
 }
 
-#main-title h3 a:hover{
-    color: #ecf0f1b0;
+/* NAVIGATION */
+#main-title {
+	position: sticky;
+	background-color: #222f3e;
+	height: 60px;
+	top: 0;
+	z-index: 2;
 }
 
-#side-nav{
-    font-family: 'Open Sans Condensed', sans-serif;
-    height: 100%;
-    width: 100px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #34495e;
-    overflow-x: hidden;
-    padding-top: 20px;
+#main-title h3 {
+	font-size: 20px;
+	padding-top: 15px;
+	padding-right: 30px;
+	text-align: right;
+	overflow: hidden;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
-#side-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    margin-top: 50px;
+#main-title h3 a {
+	text-decoration: none;
+	color: white;
 }
 
-#side-nav li a{
-    display: block;
-    color: white;
-    padding: 10px 10px;
-    text-decoration: none;
+#main-title h3 a:hover {
+	color: #ecf0f1b0;
+}
+
+#side-nav {
+	font-family: 'Open Sans Condensed', sans-serif;
+	height: 100%;
+	width: 100px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #34495e;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+
+#side-nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	margin-top: 50px;
+}
+
+#side-nav li a {
+	display: block;
+	color: white;
+	padding: 10px 10px;
+	text-decoration: none;
 }
 
 #side-nav li a:hover {
-    color: #ecf0f1b0;
+	color: #ecf0f1b0;
 }
 
-div.bar {
-    display: inline-block;
-    width: 20px;
-    height: 75px;
-    background-color: teal;
-    margin-right: 2px;
-}
 
-/* table */
-
+/* DATA TABLE */
 table {
-    font-size: 12px;
-    border-collapse: collapse;
-    width: 100%;
+	font-size: 12px;
+	border-collapse: collapse;
+	width: 100%;
+	color: #a4b0be;
 }
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+td,
+th {
+	border: .5px dotted #a4b0be;
+	text-align: left;
+	padding: 8px;
 }
 
-td a{
-    text-decoration: none;
-    color: black;
+td a {
+	text-decoration: none;
+	color: #a4b0be;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+	background-color: #34495e;
 }
+
 #content {
-    font-family: 'Crimson Text', serif;
-    margin-left: 120px;
-    margin-top: 30px;
-}
-/* end table */
-#chart {
-    font-size: 10px;
+	font-family: 'Crimson Text', serif;
+	margin-left: 120px;
+	margin-top: 30px;
 }
 
+/* D3 STYLING */
 
-.axis path, .axis line {
+/* ==> D3 - SCATTERPLOT */
+.axis path,
+.axis line {
 	fill: none;
 	stroke: black;
 	shape-rendering: crispEdges;
 }
-			
+
 .axis text {
 	font-family: 'Crimson Text', serif;
 	font-size: 10px;
 }
 
 .dot {
-    stroke: white;
-  }
-  
+	stroke: white;
+}
+
 .tooltip {
-    position: absolute;
-    width: 200px;
-    height: 28px;
-    pointer-events: none;
-    font-size: 10px;
+	position: absolute;
+	width: 200px;
+	height: 60px;
+	pointer-events: none;
+	font-size: 10px;
+	background-color: white;
+}
+
+.tooltip p {
+	padding: 3px;
 }
 
 .line {
-    /* stroke: #999; */
-    stroke: #c0392b;
-    stroke-opacity: 0.6;
-    stroke-dasharray: 5;
-  }
+	stroke: #c0392b;
+	stroke-opacity: 0.6;
+	stroke-dasharray: 5;
+}
 
-#plot_image{
-    /* float: right; */
-    width: 500px;
-    height: auto;
-    /* overflow: hidden; */
-    padding-right: 10px;
+/* ==> D3 - IMAGES */
+#plot_image {
+	width: auto;
+	height: 370px;
+	padding: 17px;
+}
+
+#grid_image {
+	width: auto;
+	height: 250px;
+	margin: 10px;
+}
+
+
+/* ==> D3 - BAR CHART */
+
+div.bar {
+	display: inline-block;
+	width: 20px;
+	height: 75px;
+	background-color: #02feb3;
+}
+
+.bar--positive {
+	fill: steelblue;
+}
+
+.bar--negative {
+	fill: darkorange;
+}
+
+
+/* DASHBOARD ROWS */
+
+.db_row {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	font-size: 10px;
+}
+
+.db_row div {
+	background-color: white;
+	padding: 10px;
+	margin: 10px;
+	height: auto;
+}
+
+
+/* DOCUMENTATION */
+#about {
+	background-color: white;
+	margin-right: auto;
+	margin-left: auto;
+	width: 90%;
+}
+
+#about h1 {
+	padding-top: 10px;
+}
+
+#about p {
+	margin-right: auto;
+	margin-left: auto;
+	width: 90%;
+	padding: 10px;
 }

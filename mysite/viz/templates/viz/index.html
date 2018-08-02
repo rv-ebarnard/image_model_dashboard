@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
-    <title>{% block title %}Analyzing Apple Music Ad Impressions{% endblock %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-    <script src="https://d3js.org/d3.v3.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Inconsolata|Nunito|Open+Sans+Condensed:300|Raleway" rel="stylesheet">
-</head>
-<body>
-        {% block maintitle %}
-        <div id="main-title">
-            <h3><a href="{% url 'viz:index' %}">Apple Music Paid Social Preliminary Image Model</a></h3>
-        </div>
-        {% endblock %}
-
-        {% block nav %}
-        <div id="side-nav">
-            <ul>
-                <li><a href="{% url 'viz:index' %}">CTR & </br> Features</a></li>
-                <li><a href="{% url 'viz:images' %}">Images</a></li>
-                <li><a>Compare </br> Features</a></li>
-            </ul>
-        </div> 
-        {% endblock %}
-        {% block content %}
-        <div id="content">
+   <head>
+      <title>{% block title %}Analyzing Apple Music Ad Impressions{% endblock %}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+      <script src="https://d3js.org/d3.v3.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Inconsolata|Nunito|Open+Sans+Condensed:300|Raleway" rel="stylesheet">
+   </head>
+   <body>
+      {% block maintitle %}
+      <div id="main-title">
+         <h3><a href="{% url 'viz:index' %}">Apple Music Paid Social Preliminary Image Model</a></h3>
+      </div>
+      {% endblock %}
+      {% block nav %}
+      <div id="side-nav">
+         <ul>
+            <li><a href="{% url 'viz:index' %}">CTR & </br> Features</a></li>
+            <li><a href="{% url 'viz:about' %}">Documentation</a></li>
+            <li><a href="{% url 'viz:images' %}">Image Data</a></li>
+         </ul>
+      </div>
+      {% endblock %}
+      {% block content %}
+      <div id="content">
+         <div class="db_row">
             <div id="chart">
-                
+               <h1>Feature Click Through Rate per Image</h1>
             </div>
-            <div>
-                    <img src="{% static 'images/2.png' %}" alt="data img" id="plot_image">
+            <div id="plot_img_div">
+               <img src="{% static 'images/3.png' %}" alt="Apple Music Ad Image" id="plot_image">
             </div>
-            <!-- <script type="text/javascript">
-                let fea_data = 'feature_data}}';
-            </script> -->
-
-        </div>
-        {% endblock %} 
-    <script type="text/javascript" src="{% static 'js/scatter.js' %}"></script>
-    <script  type="text/javascript" src="{% static 'js/scatterplot.js' %}"></script>
-
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
-</body>
+         </div>
+         <div class="db_row">
+            <div id="bar_chart">
+               <h1>Average CTR of Images with Feature Present</h1>
+            </div>
+            <div id="bar_diff">
+               <h1>Impact of Feature on Image CTR</h1>
+            </div>
+         </div>
+         <div class="db_row">
+            <div id="container"></div>
+            <div id="spider-container"></div>
+         </div>
+      </div>
+      {% endblock %} 
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+      <script src="https://code.highcharts.com/modules/export-data.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://code.highcharts.com/highcharts-more.js"></script>
+      <script type="text/javascript" src="{% static 'js/scatter.js' %}"></script>
+      <script  type="text/javascript" src="{% static 'js/scatterplot.js' %}"></script>
+      <script  type="text/javascript" src="{% static 'js/barchart.js' %}"></script>
+      <script  type="text/javascript" src="{% static 'js/bardiff.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/bars.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/spider.js' %}"></script>
+   </body>
 </html>
