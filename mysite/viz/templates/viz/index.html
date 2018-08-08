@@ -1,93 +1,108 @@
-<!DOCTYPE html>
-{% load static %}
+<!DOCTYPE html> {% load static %}
 <html lang="en">
-   <head>
-      <title>{% block title %}Image Data Analysis{% endblock %}</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-      <script src="https://d3js.org/d3.v3.js"></script>
-      <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Inconsolata|Nunito|Open+Sans+Condensed:300|Raleway" rel="stylesheet">
-   </head>
-   <body>
-      {% block maintitle %}
-      <div id="main-title">
-         <h3><a href="{% url 'viz:index' %}">Image Data Analysis</a></h3>
-      </div>
-      {% endblock %}
-      {% block nav %}
-      <div id="side-nav">
-         <ul>
+
+<head>
+    <title>{% block title %}Image Data Analysis{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Inconsolata|Nunito|Open+Sans+Condensed:300|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    {% block maintitle %}
+    <div id="main-title">
+        <h3><a href="{% url 'viz:index' %}">Image Data Analysis</a></h3>
+    </div>
+    {% endblock %} {% block nav %}
+    <div id="side-nav">
+        <ul>
             <li><a href="{% url 'viz:about' %}">Documentation</a></li>
             <li>
-               <a href="{% url 'viz:index' %}" onclick="">Apple Music</a>
-               <ul>
-                  <li><a href="{% url 'viz:index' %}"> > Performance Metric</a></li>
-                  <li><a href="{% url 'viz:images' %}"> > Image Data</a></li>
-               </ul>
+                <a href="{% url 'viz:index' %}" onclick="">Apple Music</a>
+                <ul>
+                    <li><a href="{% url 'viz:index' %}"> > Performance Metric</a></li>
+                    <li><a href="{% url 'viz:images' %}"> > Image Data</a></li>
+                </ul>
             </li>
-         </ul>
-      </div>
-      {% endblock %}
-      {% block content %}
-      <div id="content">
-         <div class="db_row" style="margin-bottom: -20px;">
-            <div style="background-color: #2a2a2a; margin-left: -10px;">
-               <div id="chart">
-                  <h1>Feature Click Through Rate per Image</h1>
-               </div>
-               <div id="testing">
-                  <h1>Filter for Confidence Level</h1>
-                  <input type="text" name="Confidence Level" id="confidenceLevelInput">
-                  <input type="submit" onclick="updateScatterPlot(); updateBarChart();" id="confidenceLevelBtn">
-               </div>
-            </div>
-            <div style="background-color: #2a2a2a; margin-left: -25px;">
-                <div id="download">
-                    <button>Download JSON</button>
-                    <button>Download CSV</button>
-                </div>
-                <div id="plot_img_div">
-                    <figure>
-                        <img src="{% static 'images/3.png' %}" alt="Apple Music Ad Image" id="plot_image">
-                        <figcaption id="plot_img_caption"></figcaption>
-                    </figure>
-                </div>
-            </div>
+        </ul>
+    </div>
+    {% endblock %} {% block content %}
+    <div id="content">
+        <!-- first row -->
+        <div class="db_row">
             
-         </div>
-         <div class="db_row">
+            <!-- left side -->
+            <div class="db_inner_row">
+                <!-- scatter plot -->
+                <div id="chart">
+                    <h1>Feature Click Through Rate per Image</h1>
+                </div>
+                <!-- filters and download -->
+                
+            </div>
+
+            <!-- right side -->
+            <div id="plot_img_div">
+                <figure>
+                    <img src="{% static 'images/3.png' %}" alt="Apple Music Ad Image" id="plot_image">
+                    <figcaption id="plot_img_caption"></figcaption>
+                </figure>
+            </div>
+
+        </div>
+        <div id="testing" class="db_row">
+                <div>
+                    <h1>Filter for Confidence</h1>
+                    <input type="text" name="Confidence Level" id="confidenceLevelInput" class="inputBox">
+                    <button class="btn" onclick="updateScatterPlot(); updateBarChart();" id="confidenceLevelBtn">FILTER</button>
+                </div>
+                <div>
+                    <h1>Filter for Sparsity</h1>
+                    <input type="text" name="Confidence Level" id="confidenceLevelInput" class="inputBox">
+                    <button class="btn" onclick="updateScatterPlot(); updateBarChart();" id="confidenceLevelBtn">FILTER</button>
+                </div>
+                <div>
+                    <h1>Download Data</h1>
+                    <button class="btn"><i class="fa fa-download"></i><a href="{% static 'js/test_data.json' %}" download> JSON</a></button>
+                    <button class="btn"><i class="fa fa-download"></i><a href="{% static '' %}" download> CSV</a></button>
+                </div>
+            </div>
+        <div class="db_row">
             <div id="bar_chart">
-               <h1>Average CTR of Images with Feature Present</h1>
+                <h1>Average CTR of Images with Feature Present</h1>
             </div>
             <div id="bar_diff">
-               <h1>Impact of Feature on Image CTR</h1>
+                <h1>Impact of Feature on Image CTR</h1>
             </div>
-         </div>
-         <div class="db_row">
+        </div>
+        <div class="db_row">
             <div id="container"></div>
             <div id="spider-container"></div>
-         </div>
-         <div class="db_row">
-         </div>
-      </div>
-      {% endblock %}
-      <!-- HighCharts.js -->
-      <script src="https://code.highcharts.com/highcharts.js"></script>
-      <script src="https://code.highcharts.com/modules/exporting.js"></script>
-      <script src="https://code.highcharts.com/modules/export-data.js"></script>
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-      <script src="https://code.highcharts.com/highcharts-more.js"></script>
-      <!-- data -->
-      <script type="text/javascript">
-         //   JSON data pulled from Django Models ==> format in formatJson.js
-         var json_data = jQuery.parseJSON('{{feature_data | safe}}');
-      </script>
-      <script type="text/javascript" src="{% static 'js/formatJson.js' %}"></script>
-      <!-- D3 Files -->
-      <script  type="text/javascript" src="{% static 'js/scatterplot.js' %}"></script>
-      <script  type="text/javascript" src="{% static 'js/barchart.js' %}"></script>
-      <script  type="text/javascript" src="{% static 'js/bardiff.js' %}"></script>
-      <script type="text/javascript" src="{% static 'js/bars.js' %}"></script>
-      <script type="text/javascript" src="{% static 'js/spider.js' %}"></script>
-   </body>
+        </div>
+        <div class="db_row">
+        </div>
+    </div>
+    {% endblock %}
+    <!-- HighCharts.js -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <!-- data -->
+    <script type="text/javascript">
+        //   JSON data pulled from Django Models ==> format in formatJson.js
+        var json_data = jQuery.parseJSON('{{feature_data | safe}}');
+    </script>
+    <script type="text/javascript" src="{% static 'js/formatJson.js' %}"></script>
+    <!-- D3 Files -->
+    <script type="text/javascript" src="{% static 'js/scatterplot.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/barchart.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bardiff.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bars.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/spider.js' %}"></script>
+</body>
+
 </html>
