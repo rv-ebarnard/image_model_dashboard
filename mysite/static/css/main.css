@@ -15,11 +15,6 @@ body {
 	background-color: #2a2a2a;
 }
 
-h1 {
-	font-size: 15px;
-	text-align: center;
-}
-
 /* NAVIGATION */
 #main-title {
 	position: sticky;
@@ -27,6 +22,7 @@ h1 {
 	height: 60px;
 	top: 0;
 	z-index: 2;
+	width: 200%;
 }
 
 #main-title h3 {
@@ -50,7 +46,7 @@ h1 {
 #side-nav {
 	font-family: 'Open Sans Condensed', sans-serif;
 	height: 100%;
-	width: 100px;
+	width: 120px;
 	position: fixed;
 	z-index: 1;
 	top: 0;
@@ -79,6 +75,21 @@ h1 {
 	color: #ecf0f1b0;
 }
 
+#side-nav ul li ul{
+	list-style-type: none;
+	margin-top: 0;
+}
+
+#side-nav ul li ul a{
+	padding-left: 15px;
+	margin-top: -10px;
+	font-size: 12px;
+	color: #ecf0f1b0;
+}
+
+#side-nav ul li ul a:hover{
+	color: white;
+}
 
 /* DATA TABLE */
 table {
@@ -106,7 +117,7 @@ tr:nth-child(even) {
 
 #content {
 	font-family: 'Crimson Text', serif;
-	margin-left: 120px;
+	margin-left: 135px;
 	margin-top: 30px;
 }
 
@@ -151,7 +162,7 @@ tr:nth-child(even) {
 /* ==> D3 - IMAGES */
 #plot_image {
 	width: auto;
-	height: 370px;
+	height: 365px;
 	padding: 17px;
 }
 
@@ -196,6 +207,10 @@ div.bar {
 	height: auto;
 }
 
+.db_row h1 {
+	font-size: 15px;
+	text-align: center;
+}
 
 /* DOCUMENTATION */
 #about {
@@ -207,6 +222,7 @@ div.bar {
 
 #about h1 {
 	padding-top: 10px;
+	text-align: center;
 }
 
 #about p {
@@ -215,3 +231,6 @@ div.bar {
 	width: 90%;
 	padding: 10px;
 }
+
+/* TESTING */
+
