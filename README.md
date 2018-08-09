@@ -9,8 +9,8 @@ Each point on the scatter plot represents one image's feature and is plotted acc
 The other bar graphs display the average click through rate for each image, the impact of having a feature on the image and the average click through rate of images without that feature.
 
 ## tech stack
-Dajngo Framework (Python)
-D3.js for data visualizations
+* Django Framework (Python)
+* D3.js for data visualizations
 
 
 ## what still needs to be done
