@@ -15,7 +15,7 @@ D3.js for data visualizations
 
 ## what still needs to be done
 
-1. Send requests to Jenkins image model build for specified business
+- [ ] Send requests to Jenkins image model build for specified business
     Request has 2 headers:
     1. business (the business that the pictures came from)
     2. image source (arbitrary name the business gave the images)
@@ -36,17 +36,17 @@ D3.js for data visualizations
     }
     ```
     
-2. Use Django model manager to update Django models according to new data
+- [ ] Use Django model manager to update Django models according to new data
 
-3. Updating all the graphs according to filters and new builds
+- [ ] Updating all the graphs according to filters and new builds
    Currently the scatter plot is the only chart with the function to update
 
-4. Adding sparsity filter
+- [ ] Adding sparsity filter
   lower bound _n_ and upper bound _m_
   we filter out features that occur in:
   less than _n_ percent of images and/or more than _m_ percent of images
 
-5. Reformatting y and x axis on scatter plot to adjust for new data
+- [ ] Reformatting y and x axis on scatter plot to adjust for new data
    X-Axis should remove categories that don't show any data points
 
 
