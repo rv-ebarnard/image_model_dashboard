@@ -22,7 +22,6 @@ body {
 	height: 60px;
 	top: 0;
 	z-index: 2;
-	width: 200%;
 }
 
 #main-title h3 {
@@ -232,5 +231,31 @@ div.bar {
 	padding: 10px;
 }
 
-/* TESTING */
+/* 	DOWNLOAD BUTTONS */
+.inputBox{
+	padding: 5px 10px;
+	outline: none;
+}
+
+.btn {
+	background-color:#1fc98c;
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	cursor: pointer;
+	font-size: 12px;
+	font-family: 'Nunito', sans-serif;
+	outline: none;
+  }
+
+  .btn a{
+	  text-decoration: none;
+	  color: white;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+	background-color: #26b78c;
+  }
+
 

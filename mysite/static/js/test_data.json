@@ -1,0 +1,167 @@
+[
+    {
+        "model": "viz.featurectr",
+        "pk": "imgcontent.30secstomars-walkonwater_imgtemp.achalf",
+        "fields": {
+            "business": "Apple Music",
+            "ctr": 0.006590016825574874,
+            "black_x": 0,
+            "text": 1,
+            "girl": 0,
+            "headwear": 0,
+            "poster": 1,
+            "fun": 0,
+            "skyblue": 0
+        }
+    },
+    {
+        "model": "viz.featurectr",
+        "pk": "imgcontent.3lau-awalkobalt_imgtemp.merlinmachinet3",
+        "fields": {
+            "business": "Filo",
+            "ctr": 0.007315404452397242,
+            "black_x": 0,
+            "text": 0,
+            "girl": 0,
+            "headwear": 0,
+            "poster": 0,
+            "fun": 0,
+            "skyblue": 0
+        }
+    },
+    {
+        "model": "viz.featurectr",
+        "pk": "imgcontent.3lau-awolkobalt_imgtemp.merlinmachinet3",
+        "fields": {
+            "business": "Apple Music",
+            "ctr": 0.004591406260959953,
+            "black_x": 0,
+            "text": 0,
+            "girl": 0,
+            "headwear": 0,
+            "poster": 0,
+            "fun": 0,
+            "skyblue": 0
+        }
+    },
+    {
+        "model": "viz.featurectr",
+        "pk": "imgcontent.aboogiewitdahoodie-pressshot_imgtemp.pressshot",
+        "fields": {
+            "business": "Power",
+            "ctr": 0.00950294812847643,
+            "black_x": 0,
+            "text": 0,
+            "girl": 1,
+            "headwear": 1,
+            "poster": 0,
+            "fun": 0,
+            "skyblue": 0
+        }
+    },
+    {
+        "model": "viz.featurectr",
+        "pk": "imgcontent.adele-hello_imgtemp.achalf",
+        "fields": {
+            "business": "Power",
+            "ctr": 0.0025985937022317334,
+            "black_x": 0,
+            "text": 0,
+            "girl": 0,
+            "headwear": 0,
+            "poster": 0,
+            "fun": 0,
+            "skyblue": 0
+        }
+    },
+    {
+        "model": "viz.featurectr",
+        "pk": "imgcontent.adele-sendmylove_imgtemp.achalf",
+        "fields": {
+            "business": "Filo",
+            "ctr": 0.006577080960970313,
+            "black_x": 0,
+            "text": 0,
+            "girl": 0,
+            "headwear": 0,
+            "poster": 0,
+            "fun": 0,
+            "skyblue": 0
+        }
+    },
+    {
+        "model": "viz.featurectr",
+        "pk": "imgcontent.adele-sendmylove_imgtemp.achalf8",
+        "fields": {
+            "business": "Apple Music",
+            "ctr": 0.007396043414534857,
+            "black_x": 0,
+            "text": 0,
+            "girl": 0,
+            "headwear": 0,
+            "poster": 0,
+            "fun": 0,
+            "skyblue": 0
+        }
+    },
+    {
+        "model": "viz.featurectr",
+        "pk": "imgcontent.adele-sendmylove_imgtemp.achalf8gradiant",
+        "fields": {
+            "business": "Apple Music",
+            "ctr": 0.0038335507269430216,
+            "black_x": 0,
+            "text": 1,
+            "girl": 0,
+            "headwear": 0,
+            "poster": 0,
+            "fun": 0,
+            "skyblue": 0
+        }
+    },
+    {
+        "model": "viz.featurectr",
+        "pk": "imgcontent.adele_imgtemp.3phones",
+        "fields": {
+            "business": "Filo",
+            "ctr": 0.004546262667310085,
+            "black_x": 0,
+            "text": 1,
+            "girl": 0,
+            "headwear": 0,
+            "poster": 0,
+            "fun": 0,
+            "skyblue": 0
+        }
+    },
+    {
+        "model": "viz.featurectr",
+        "pk": "imgcontent.adele_imgtemp.adele-achalf8gradient",
+        "fields": {
+            "business": "Power",
+            "ctr": 0.0029371291194595682,
+            "black_x": 0,
+            "text": 0,
+            "girl": 0,
+            "headwear": 0,
+            "poster": 0,
+            "fun": 0,
+            "skyblue": 0
+        }
+    },
+    {
+        "model": "viz.featurectr",
+        "pk": "imgcontent.adele_imgtemp.avhalf",
+        "fields": {
+            "business": "Apple Music",
+            "ctr": 0.005988074740672259,
+            "black_x": 0,
+            "text": 1,
+            "girl": 0,
+            "headwear": 1,
+            "poster": 0,
+            "fun": 0,
+            "skyblue": 0
+        }
+    }
+]
