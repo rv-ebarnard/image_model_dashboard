@@ -2,7 +2,7 @@
 
 ## about
 
-An interactive dashboard displaying data from Red Ventures' image model analysis. 
+An interactive dashboard displaying data from Red Ventures' image model analysis.:chart_with_upwards_trend::bar_chart::chart_with_downwards_trend:
 
 Each point on the scatter plot represents one image's feature and is plotted according to its click through rate. If you hover over a point that is an image with multiple features on the plot a red dotted line will appear indicating their connection. You can filter the points for the confidence level (Google Vision's API assigns floating numbers for how confident they are that a certain features is in an image). 
 
@@ -38,7 +38,7 @@ The other bar graphs display the average click through rate for each image, the 
     
 - [ ] Use Django model manager to update Django models according to new data
 
-- [ ] Updating all the graphs according to filters and new builds :bar_chart:
+- [ ] Updating all the graphs according to filters and new builds
    Currently the scatter plot is the only chart with the function to update
 
 - [ ] Adding sparsity filter
