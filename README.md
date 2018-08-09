@@ -4,7 +4,7 @@
 
 An interactive dashboard displaying data from Red Ventures' image model analysis.:chart_with_upwards_trend::bar_chart::chart_with_downwards_trend:
 
-Each point on the scatter plot represents one image's feature and is plotted according to its click through rate. If you hover over a point that is an image with multiple features on the plot a red dotted line will appear indicating their connection. You can filter the points for the confidence level (Google Vision's API assigns floating numbers for how confident they are that a certain features is in an image). 
+Each point on the scatter plot represents one image's feature and is plotted according to its click through rate. If you hover over a point that is an image with multiple features on the plot a red dotted line will appear indicating their connection. You can filter the points for the confidence level (Google Vision's API assigns floating numbers for how confident they are that a certain feature is in an image). 
 
 The other bar graphs display the average click through rate for each image, the impact of having a feature on the image and the average click through rate of images without that feature.
 
