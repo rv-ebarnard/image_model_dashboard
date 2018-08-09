@@ -66,6 +66,17 @@ function getfeatureDetails(){
     return featureDetails;  
 }
 
+function getUpdatedFeatures(){
+    var featureDetails = getfeatureDetails();
+    var updated_feature_categories = [];
+    for(i = 0; i < feature_categories.length; i++){
+        if( featureDetails[i].countCTR > 0){
+            updated_feature_categories.push(featureDetails[i].feature);
+        }
+    }
+    return updated_feature_categories;
+}
+
 function getAvgCTRData(){
     var featureDetails = getfeatureDetails();
     var avgCTR = [];

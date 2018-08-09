@@ -5,6 +5,7 @@ from django.db import models
 
 class FeatureCTR(models.Model):
     image_name = models.CharField(max_length=100, primary_key=True, null=False, unique=True)
+    # business = models.CharField(max_length=100, null=False)
     ctr = models.DecimalField(max_digits=20, decimal_places=19)
     black_x = models.DecimalField(max_digits=20, decimal_places=19)
     text = models.DecimalField(max_digits=20, decimal_places=19)

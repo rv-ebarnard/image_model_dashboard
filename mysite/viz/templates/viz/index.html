@@ -54,7 +54,7 @@
         </div>
         <div id="testing" class="db_row">
                 <div>
-                    <h1>Filter for Confidence</h1>
+                    <h1>Filter for Detection Confidence</h1>
                     <input type="text" name="Confidence Level" id="confidenceLevelInput" class="inputBox">
                     <button class="btn" onclick="updateScatterPlot(); updateBarChart();" id="confidenceLevelBtn">FILTER</button>
                 </div>
@@ -79,7 +79,6 @@
         </div>
         <div class="db_row">
             <div id="container"></div>
-            <div id="spider-container"></div>
         </div>
         <div class="db_row">
         </div>
@@ -102,7 +101,6 @@
     <script type="text/javascript" src="{% static 'js/barchart.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/bardiff.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/bars.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/spider.js' %}"></script>
 </body>
 
 </html>

@@ -22,7 +22,6 @@ body {
 	height: 60px;
 	top: 0;
 	z-index: 2;
-	width: 200%;
 }
 
 #main-title h3 {
@@ -235,6 +234,7 @@ div.bar {
 /* 	DOWNLOAD BUTTONS */
 .inputBox{
 	padding: 5px 10px;
+	outline: none;
 }
 
 .btn {
@@ -245,6 +245,7 @@ div.bar {
 	cursor: pointer;
 	font-size: 12px;
 	font-family: 'Nunito', sans-serif;
+	outline: none;
   }
 
   .btn a{

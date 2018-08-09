@@ -148,11 +148,34 @@ function updateScatterPlot(){
         svg.selectAll("circle").data(scatterPlotData).remove();
 
         //GET NEW VALUES
-        scatterPlotData = getFormattedScatterPlotData();
+		scatterPlotData = getFormattedScatterPlotData();
+		feature_categories = getUpdatedFeatures();
+		console.log(feature_categories);
 
-        //UPDATE YSCALE DOMAIN
-        // yScale.domain([0, d3.max(scatterPlotData, function(d) { return d[2]; })]);
-        
+		
+
+		xScale.domain([0, feature_categories.length]).range([padding, w - padding * 2]);
+        yScale.domain([0, d3.max(scatterPlotData, function(d) { return d[2]; })]);
+		
+		//AXIS
+		xAxis.scale(xScale)
+			.orient("bottom")
+			.tickValues(ticks)
+			.tickFormat(function (d, i) {
+				return feature_categories[i]
+			});
+
+		//DEFINE Y-AXIS
+		yAxis.scale(yScale)
+			.orient("left")
+			.ticks(10);
+
+		//UPDATE AXIS
+		svg.select(".x.axis") // change the x axis
+            .call(xAxis);
+        svg.select(".y.axis") // change the y axis
+            .call(yAxis);
+
         //CREATES DOT POINTS, TOOLTIP, LINKS BTWN POINTS
         svg.selectAll("circle")
             .data(scatterPlotData)
@@ -161,7 +184,8 @@ function updateScatterPlot(){
             })
             .attr("cy", function(d){
                 return yScale(d[1]);
-            });
+			});
+		
 
         //ENTER
         svg.selectAll('circle')
