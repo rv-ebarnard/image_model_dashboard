@@ -1,6 +1,6 @@
 # image_model_dashboard
 
-ABOUT:
+##about
 
 An interactive dashboard displaying data from Red Ventures' image model analysis. 
 
@@ -8,12 +8,12 @@ Each point on the scatter plot represents one image's feature and is plotted acc
 
 The other bar graphs display the average click through rate for each image, the impact of having a feature on the image and the average click through rate of images without that feature.
 
-TECH STACK:
+##tech stack
 Dajngo Framework (Python)
 D3.js for data visualizations
 
 
-WHAT STILL NEEDS TO BE DONE:
+##what still needs to be done
 
 1. Send requests to Jenkins image model build for specified business
     Request has 2 headers:
@@ -49,8 +49,9 @@ WHAT STILL NEEDS TO BE DONE:
    X-Axis should remove categories that don't show any data points
 
 
-HOW TO GET A LOCAL VERSION OF PROJECT RUNNING ON YOUR COMPUTER:
+##run locally/getting started
 
+In the command line...
 1. git clone git@github.com:rv-ebarnard/image_model_dashboard.git
 
 2. cd mysite
