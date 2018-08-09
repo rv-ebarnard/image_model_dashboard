@@ -38,7 +38,7 @@ The other bar graphs display the average click through rate for each image, the 
     
 - [ ] Use Django model manager to update Django models according to new data
 
-- [ ] Updating all the graphs according to filters and new builds
+- [ ] Updating all the graphs according to filters and new builds :bar_chart:
    Currently the scatter plot is the only chart with the function to update
 
 - [ ] Adding sparsity filter
