@@ -22,7 +22,7 @@ D3.js for data visualizations
     
     Returns:
     JSON with each object having an image name and feature attributes. For example, there could be 659 objects with 480 attributes each.
-    _example:_
+    ```
     {
       "imgcontent.1080x1080-us-c1-10sec-to5000_imgtemp.notes-video":
         {   "aliceblue":0.0,
@@ -34,6 +34,7 @@ D3.js for data visualizations
         },
        "img...etc"
     }
+    ```
     
 2. Use Django model manager to update Django models according to new data
 
@@ -52,6 +53,7 @@ D3.js for data visualizations
 ## run locally/getting started
 
 In the command line...
+```
 1. git clone git@github.com:rv-ebarnard/image_model_dashboard.git
 
 2. cd mysite
@@ -59,3 +61,4 @@ In the command line...
 3. python3 manage.py runserver
 
 4. Go to http://127.0.0.1:8000/viz
+```
