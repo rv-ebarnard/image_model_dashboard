@@ -53,4 +53,4 @@ HOW TO GET A LOCAL VERSION OF PROJECT RUNNING ON YOUR COMPUTER:
 
 3. python3 manage.py runserver
 
-4. Go to http://127.0.0.1:8000/
+4. Go to http://127.0.0.1:8000/viz
